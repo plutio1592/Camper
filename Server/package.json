@@ -52,6 +52,7 @@
     "once": "^1.4.0",
     "path-is-absolute": "^1.0.1",
     "path-parse": "^1.0.7",
+    "react-google-login": "^5.2.2",
     "resolve": "^1.22.1",
     "semver": "^5.7.1",
     "sprintf-js": "^1.0.3",
