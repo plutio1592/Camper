@@ -1,10 +1,11 @@
+import "dotenv/config";
 import React from 'react';
-import './App.css';
+import './App.style.ts';
 import axios from 'axios'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Mainpage from "./pages/mainpage/Mainpage"
 
-
-
-axios.get(`http://localhost:4002`)
+axios.get(`http://ec2-3-39-232-45.ap-northeast-2.compute.amazonaws.com:4002`)
   .then(function (response) {
     // 성공 핸들링
     console.log(response);
@@ -17,13 +18,14 @@ axios.get(`http://localhost:4002`)
     // 항상 실행되는 영역
   });
 
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Mainpage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
